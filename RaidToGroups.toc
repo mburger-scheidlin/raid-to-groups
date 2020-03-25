@@ -1,0 +1,9 @@
+## Interface: 11303
+## Title: Raid To Groups
+## Notes: Assists in splitting a Raid into Groups
+## Version: 0.9.0
+## Author: Urquart
+
+RaidToGroups_localization.lua
+RaidToGroups_test.lua
+RaidToGroups.lua
