@@ -5,5 +5,4 @@
 ## Author: Urquart
 
 RaidToGroups_localization.lua
-RaidToGroups_test.lua
 RaidToGroups.lua

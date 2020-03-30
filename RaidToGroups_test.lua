@@ -1,3 +1,6 @@
+local addonName, addon = ...
+local L = addon.L
+
 -- TESTS
 
 local function IsInRaid_test()
@@ -41,6 +44,7 @@ local function parseRaid_test()
 	end
 	return raidgroup;
 end
+
 
 local function radisband_test()
 	print(L["radisband_message"] .. " " .. UnitName("player"));
@@ -110,3 +114,4 @@ local function raidToGroups_test(msg)
 		print (L["usage_disband"]);
 	end
 end
+addon.raidToGroups_test = raidToGroups_test;

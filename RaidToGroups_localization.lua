@@ -1,3 +1,5 @@
+local addonName, addon = ...
+
 local function defaultFunc(L, key)
  -- If this function was called, we have no localization for this key.
  -- We could complain loudly to allow localizers to see the error of their ways, 
@@ -7,7 +9,7 @@ local function defaultFunc(L, key)
 end
 MyLocalizationTable = setmetatable({}, {__index=defaultFunc});
 
-local L = MyLocalizationTable;
+L = MyLocalizationTable;
 if GetLocale() == "deDE" then
 	L["welcome_message"]   = "Raid to Groups geladen. Benutze den Befehl /rtg.";
 	L["not_in_raid"]       = "Du bist nicht in einer Raidgruppe";
@@ -37,3 +39,5 @@ else
 	L["invite_from"]       = "You will get an invite from";
 	L["radisband_message"] = "Raid disbanded by";
 end
+
+addon.L = L;

@@ -1,3 +1,6 @@
+local addonName, addon = ...
+local L = addon.L;
+
 -- constructs a 2-dim array according to raid groups
 local function parseRaid()
     local raidgroup = {};
@@ -94,6 +97,7 @@ local function raidToGroups(msg)
 		print (L["usage_disband"]);
 	end
 end
+addon.raidToGroups = raidToGroups;
 
 
 -- Main operations
@@ -101,6 +105,6 @@ SLASH_RAIDTOGROUPS1 = "/raidtogroups";
 SLASH_RAIDTOGROUPS2 = "/rtg";
 
 SlashCmdList["RAIDTOGROUPS"] = function(msg)
-   raidToGroups(msg);
+   addon.raidToGroups(msg);
 end 
 print(L["welcome_message"]);
